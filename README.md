@@ -1,8 +1,16 @@
 # Notes
 
-build of an application called **Notesy**
+build of an application called **Notesy** :v:
 
+### Author: Yasmin Adaileh :sunglasses:
+
+### Links and Resources :paperclip:
+[submission PR](https://github.com/yasmin-401-advanced-javascript/notes/pull/1)
 ## Library Used
+
+### Modules
+#### `notes.js`
+#### `input.js`
 
 In this app I used only the **minimist** & **jsdoc**
 
@@ -13,7 +21,7 @@ In this app I used only the **minimist** & **jsdoc**
 
 - we didn't use the **test** yet.
 
-## How to run the app?
+## How to run the app? :runner:
 
 in the **Ubuntu** just type:
 `node notes.js --anyKeyYouWant add||Add||a||A||ADD -a||--add 'And type Here Your Note'`
