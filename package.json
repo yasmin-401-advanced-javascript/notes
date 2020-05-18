@@ -1,14 +1,13 @@
 {
-    "name": "notes",
+    "name": "notes-1",
     "version": "1.0.0",
-    "description": "build of an application called Notesy",
+    "description": "build of an application called **Notesy** :v:",
     "main": "notes.js",
     "directories": {
         "lib": "lib"
     },
     "dependencies": {
         "eslint": "^7.0.0",
-        "is-url": "^1.2.4",
         "jsdoc": "^3.6.4",
         "lint": "^0.7.0",
         "minimist": "^1.2.5"
