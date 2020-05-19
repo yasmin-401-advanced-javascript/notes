@@ -1,0 +1,34 @@
+{
+    "name": "notes",
+    "version": "1.0.0",
+    "description": "build of an application called Notesy",
+    "main": "notes.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "dependencies": {
+        "eslint": "^7.0.0",
+        "is-url": "^1.2.4",
+        "jsdoc": "^3.6.4",
+        "lint": "^0.7.0",
+        "minimist": "^1.2.5"
+    },
+    "devDependencies": {
+        "jest": "^26.0.1"
+    },
+    "scripts": {
+        "lint": "eslint '**/*.js'",
+        "test": "jest --coverage --verbose"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yasmin-401-advanced-javascript/notes.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yasmin-401-advanced-javascript/notes/issues"
+    },
+    "homepage": "https://github.com/yasmin-401-advanced-javascript/notes#readme"
+}
