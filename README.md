@@ -208,7 +208,7 @@ this is format of the data we'll ganna have it from MongoDB `{**JOSN fomat**}`
 **schema**  => (document data structure)**shape of the document** that is enforced via the application layer.
 **Models** => (equivalent to records in a relational database)higher-order constructors that take a schema and create an instance of a document.
 
-The new **dependency** for it is `npm i mongosse`  and we will need also `dotenv`.
+The new **dependency** for it is `npm i mongosse`  and we will need also `dotenv`, `superagent`.
 
 **to create a new schema :**
 ```
