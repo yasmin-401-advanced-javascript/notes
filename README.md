@@ -6,7 +6,7 @@ build of an application called **Notesy** :v:
 
 ### Links and Resources :paperclip:
 
-[submission PR](https://github.com/yasmin-401-advanced-javascript/notes/pull/2)
+[submission PR](https://github.com/yasmin-401-advanced-javascript/notes/pull/5)
 
 ## Library Used
 
