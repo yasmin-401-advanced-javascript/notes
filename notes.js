@@ -6,18 +6,18 @@ const Notess = require('./lib/notes.js');
 
 const mongoose = require('mongoose');
 const Notes = require('./lib/model/notes-schema.js');
-const MONGOO_URI = 'mongodb://localhost:27017/notes';
-// const MONGOO_URI = process.env.MONGODB_URL;
-mongoose.connect(MONGOO_URI, {
+// const MONGODB_URI = 'mongodb://localhost:27017/notes';
+const MONGODB_URI = process.env.MONGODB_URL || 'mongodb://localhost:27017/notes';
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-const doDataStuff = async () => {
-  let noteItem = {
-    Category: 'school',
-    addMessege: 'alben y6osha',
-  };
+const doDataStuff = async (noteItem) => {
+  // let noteItem = {
+  //   Category: 'school',
+  //   addMessege: 'alben y6osha',
+  // };
   let note = new Notes(noteItem);
   
   await note.save();
@@ -29,9 +29,14 @@ const doDataStuff = async () => {
   mongoose.disconnect();
   
 };
+
+let noteItem = {
+  Category: 'school',
+  addMessege: 'alben y6osha',
+};
 // const trying = new Input();
 
 const data = new Notess();
 data.execute();
 // data.add();
-doDataStuff();
+doDataStuff(noteItem);
