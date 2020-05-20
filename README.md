@@ -206,3 +206,32 @@ this is format of the data we'll ganna have it from MongoDB `{**JOSN fomat**}`
 **Fields**  => (similar to **columns** in a SQL table). 
 **schema**  => (document data structure)**shape of the document** that is enforced via the application layer.
 **Models** => (equivalent to records in a relational database)higher-order constructors that take a schema and create an instance of a document.
+
+The new **dependency** for it is `npm i mongosse`  and we will need also `dotenv`.
+
+**to create a new schema :**
+```
+const schemaName = new mangoose.Schema({
+here we'll pass our objs.
+});
+
+module.exports = mongoose.model('this will be the name of the collection', schemaName); //schemaName will be the schema.
+```
+in mongoDBB we don't need to create the database to store data inside it.
+
+to **run mongo** in terminal type : `mongo`
+to **see ur databases** type : `show dbs`
+
+to connect the db :
+```
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+```
+
+use the **async function** with MongoDB 
+
+we need to use the **mongo compass** because things will be so **messy in the Ubuntu** so to save time and be organized we'll use it.
+we can see our collection from there and we can **add data** to our database or **find data** or even **delete data** 
+![compass](./img/compass.PNG)
