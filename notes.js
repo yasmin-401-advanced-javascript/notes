@@ -15,35 +15,33 @@ mongoose.connect(MONGODB_URI, {
 // const data = new Notess();
 
 // trying.valid() ? data.execute(trying).then(mongoose.disconnect) :help() ;
-// data.save(trying);
 
-function help() {
-  console.log('hello');
-  process.exit();
-}
+
+// function help() {
+//   console.log('hello');
+//   process.exit();
+// }
 // data.execute(trying);
 // data.add(trying);
-// data
-//   .save(trying);
-// .then(() => data.list(trying))
-// .then(() => data.delete(trying))
-// .then(mongoose.disconnect);
+// data.save(trying);
+
 
 const doDataStuff = async (noteItem) => {
   let note = new Notes(noteItem);
 
   await note.save();
-  console.log('this is ', note);
-  let oneNote = await note.findById(note.id);
-  console.log('this is id ', oneNote);
-  let allNote = await note.find({});
-  console.log('this is all ', allNote);
+  console.log('this is ', note); // this will contain the note & the category
+  let oneNote = await Notes.findById(note.id);
+  // we used the Notes here because we want to referred  to the Food module (schema file)  
+  console.log('this is id ', oneNote); // this will return the last note in the database
+  let allNote = await Notes.find({});
+  console.log('this is all ', allNote); // this will return all the data in the database
   mongoose.disconnect();
 
 };
 
 let noteItem = {
   str: 'do your labs',
-  Category: 'school',
+  category: 'school',
 };
 doDataStuff(noteItem);
