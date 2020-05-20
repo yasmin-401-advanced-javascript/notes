@@ -185,9 +185,10 @@ banana(); // will return 'undefined' because the function is auto-mocked.
 ```
 mock..
 ---------------------------------------------------
+![welcome](./img/memesMango.jpg)
 ## Realted to class :three:
 ## mongoose & :boar: 
-![mongoose](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSQUGXP1K-85zpecNiNP3IU7zWP-___l2-TJEkR6ryFlHwjbzmb&usqp=CAU)
+![mongoose](./img/animalMongoose.jpg)
 
 Let's start talk about mangoose **temon & bomba** :joy:
 
