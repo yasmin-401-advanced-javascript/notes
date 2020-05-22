@@ -16,8 +16,9 @@
         "jest": "^26.0.1"
     },
     "scripts": {
+        "test": "jest --coverage --verbose",
         "lint": "eslint '**/*.js'",
-        "test": "jest --coverage --verbose"
+        "start": "node notes.js"
     },
     "repository": {
         "type": "git",
