@@ -67,3 +67,12 @@ In Node, the **modularity** is a **first-class concept**. In the Node.js module 
 1. **3rd party**: JS loaded from **different location** as the webpage is considered to be 3rd party.
 
 **minimist library** used to read command line arguments
+
+**pakage.json** is an important file because:
+this file **house meta information**
+meta information houses all **the info about my app** =>
+the repo Author keywords...etc
+also this file will contain the **dependencies** like express, dotenv..etc, and thats important because when we push the code to the github, we will ignore the following files:
+1. node_modules 
+2. dotenv
+the reson why we ignore the node_modules file because its contain more than 200 files and that too much to push and pull from gitHub

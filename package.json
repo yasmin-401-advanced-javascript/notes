@@ -7,7 +7,9 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage --verbose",
+    "lint": "eslint '**/*.js'",
+    "start": "node notes.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +23,10 @@
   },
   "homepage": "https://github.com/yasmin-401-advanced-javascript/notes#readme",
   "dependencies": {
+    "eslint": "^7.0.0",
     "is-url": "^1.2.4",
     "jsdoc": "^3.6.4",
+    "lint": "^0.7.0",
     "minimist": "^1.2.5"
   }
 }
