@@ -15,17 +15,16 @@ describe('INPUT MODULE', () => {
   describe('getAction()', () => {
     it('uses the right action when specified', () => {
       const options = new Input();
-      options.action = 'a'|| 'add' || 'Add' || 'A'|| 'ADD';
+      options.action = 'a'|| 'add' || 'list' || 'delete';
       expect(options.getAction('add')).toBeTruthy();
       expect(options.getAction('a')).toBeTruthy();
-      expect(options.getAction('A')).toBeTruthy();
-      expect(options.getAction('Add')).toBeTruthy();
-      expect(options.getAction('ADD')).toBeTruthy();
+      expect(options.getAction('list')).toBeTruthy();
+      expect(options.getAction('delete')).toBeTruthy();
     });
     it('return true when the action is valied', () => {
       const options = new Input();
       options.payload = 'hello';
-      options.action = 'a'|| 'add' || 'Add' || 'A'|| 'ADD';
+      options.action = 'a'|| 'add' || 'list' || 'delete';
       expect(options.valid()).toBeTruthy();
     });
   });
@@ -48,7 +47,7 @@ describe('INPUT MODULE', () => {
     it('return true when the note is valied', () => {
       const options = new Input();
       options.payload = 'hello';
-      options.action = 'a'|| 'add' || 'Add' || 'A'|| 'ADD';
+      options.action = 'a'|| 'add' || 'list' || 'delete';
       expect(options.valid()).toBeTruthy();
     });
   });
