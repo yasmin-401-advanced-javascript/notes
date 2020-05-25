@@ -16,19 +16,24 @@ build of an application called **Notesy** :v:
 
 #### `input.js`
 
-In this app I used only the **minimist** & **jsdoc**
+#### `notes-schema.js`
+
+In this app I used the **minimist** , **jsdoc** , **Mongoose**, **dotenv**
 
 ## Instruction How to Install the Library
 
 1. `npm i minimist` run it in the command line(Ubuntu)
 1. `npm i jsdoc` run it in the command line(Ubuntu)
 1. `npm i -D jest` run it in the command line(Ubuntu)
-
+1. `npm i Mongoose` run it in the command line(Ubuntu)
 
 ## How to run the app? :runner:
 
-in the **Ubuntu** just type:
-`npm test`
+in the **Ubuntu** type:
+`npm test` for test.
+`node notes.js --add "your note here" --category "category type"` to **ADD** Note.
+`node notes.js --list` to see all **saved** Note  in database.
+`node notes.js --delete` to **delete** the last note you've been added.
 
 ## UML
 

@@ -8,7 +8,6 @@ jest.spyOn(global.console, 'log');
 describe('notes module', () => {
   it(' dose nothing when execute() is called with invalied message ', () => {
     const newNote = new notes();
-    newNote.add();
     newNote.render();
     expect(console.log).toHaveBeenCalled();
   });

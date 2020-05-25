@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 'use strict';
 
 const minimist = require('minimist');
@@ -8,35 +7,25 @@ jest.mock('minimist');
 
 minimist.mockImplementation(() => {
   return {
-    f: 'Add',
-    str: 'hi',
+    a: 'here we go',
   };
 });
 
 describe('INPUT MODULE', () => {
   describe('getAction()', () => {
-    it('default to Add when its called with no action', () => {
-      const options = new Input();
-      expect(options.getAction()).toEqual('Add');
-      expect(options.valid()).toBeFalsy();
-    });
-    it('default to Add when its called with invalid method', () => {
-      const options = new Input();
-      expect(options.getAction('yasmin')).toEqual('Add');
-      expect(options.valid()).toBeFalsy();
-    });
     it('uses the right action when specified', () => {
       const options = new Input();
-      expect(options.getAction(options.action)).toEqual(options.action);
-      expect(options.getAction('add')).toEqual('add');
-      expect(options.getAction('a')).toEqual('a');
-      expect(options.getAction('A')).toEqual('A');
-      expect(options.getAction('Add')).toEqual('Add');
-      expect(options.getAction('ADD')).toEqual('ADD');
+      options.action = 'a'|| 'add' || 'Add' || 'A'|| 'ADD';
+      expect(options.getAction('add')).toBeTruthy();
+      expect(options.getAction('a')).toBeTruthy();
+      expect(options.getAction('A')).toBeTruthy();
+      expect(options.getAction('Add')).toBeTruthy();
+      expect(options.getAction('ADD')).toBeTruthy();
     });
     it('return true when the action is valied', () => {
       const options = new Input();
-      options.str = 'hello';
+      options.payload = 'hello';
+      options.action = 'a'|| 'add' || 'Add' || 'A'|| 'ADD';
       expect(options.valid()).toBeTruthy();
     });
   });
@@ -58,7 +47,8 @@ describe('INPUT MODULE', () => {
     });
     it('return true when the note is valied', () => {
       const options = new Input();
-      options.str = 'hello';
+      options.payload = 'hello';
+      options.action = 'a'|| 'add' || 'Add' || 'A'|| 'ADD';
       expect(options.valid()).toBeTruthy();
     });
   });
