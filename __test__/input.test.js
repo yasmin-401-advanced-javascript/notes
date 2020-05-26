@@ -13,19 +13,6 @@ minimist.mockImplementation(() => {
 });
 
 describe('INPUT MODULE', () => {
-  describe('getAction()', () => {
-    it('default to Add when its called with invalid method', () => {
-      const options = new Input();
-      expect(options.getAction('add')).toEqual('add');
-    });
-    it('uses the right action when specified', () => {
-      const options = new Input();
-      expect(options.getAction(options.action)).toEqual(options.action);
-      expect(options.getAction('add')).toEqual('add');
-      expect(options.getAction('a')).toEqual('a');
-    });
-
-  });
   describe('getNote()', () => {
     it('return undefined when note is not specified', () => {
       const options = new Input();
