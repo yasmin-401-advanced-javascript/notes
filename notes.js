@@ -5,3 +5,4 @@ const Notes = require('./lib/notes.js');
 
 const trying = new Input();
 Notes.execute(trying);
+console.log(trying);
