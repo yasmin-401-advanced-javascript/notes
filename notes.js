@@ -4,7 +4,5 @@ const Input = require('./lib/input.js');
 const Notes = require('./lib/notes.js');
 
 const trying = new Input();
-
-const data = new Notes
-data.execute();
-// data.add();
+Notes.execute(trying);
+// console.log(option);
