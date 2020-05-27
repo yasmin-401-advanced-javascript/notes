@@ -6,7 +6,7 @@ build of an application called **Notesy** :v:
 
 ### Links and Resources :paperclip:
 
-[submission PR](https://github.com/yasmin-401-advanced-javascript/notes/pull/2)
+[submission PR](https://github.com/yasmin-401-advanced-javascript/notes/pull/5)
 
 ## Library Used
 
@@ -16,26 +16,31 @@ build of an application called **Notesy** :v:
 
 #### `input.js`
 
-In this app I used only the **minimist** & **jsdoc**
+#### `notes-schema.js`
+
+In this app I used the **minimist** , **jsdoc** , **Mongoose**, **dotenv**
 
 ## Instruction How to Install the Library
 
 1. `npm i minimist` run it in the command line(Ubuntu)
 1. `npm i jsdoc` run it in the command line(Ubuntu)
 1. `npm i -D jest` run it in the command line(Ubuntu)
-
+1. `npm i Mongoose` run it in the command line(Ubuntu)
 
 ## How to run the app? :runner:
 
-in the **Ubuntu** just type:
-`npm test`
+in the **Ubuntu** type:
+`npm test` for test.
+`node notes.js --add "your note here" --category "category type"` to **ADD** Note.
+`node notes.js --list` to see all **saved** Note  in database.
+`node notes.js --delete` to **delete** the last note you've been added.
 
 ## UML
 
 # ![UML](urm.png)
 
-# Understanding for me.
 
+# Understanding for me.
 ## Realted to class :one:
 
 ### What is Node.js?
@@ -185,4 +190,54 @@ banana(); // will return 'undefined' because the function is auto-mocked.
 ```
 mock..
 ---------------------------------------------------
+![welcome](./img/memesMango.jpg)
+## Realted to class :three:
+## mongoose & :boar: 
+![mongoose](./img/animalMongoose.jpg)
 
+Let's start talk about mangoose **temon & bomba** :joy:
+
+### NoSQL database => MongoDB 
+
+**SQL databsae** which is like **postgres** or **mySQL** and it's use for **object-relational database management system** and it is **Object-relational mapping (ORM)** 
+
+**MongoDB** is a **schema-less NoSQ**L document database and it can contain a **big amount of data** and **mongoose** it is  an **Object Data Modeling (ODM)** which manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
+without writing big query like what we did in 301.
+
+this is format of the data we'll ganna have it from MongoDB `{**JOSN fomat**}`
+![MongoDB](./img/mongoDB.PNG)
+
+**Collection**  => ( equivalent to **tables** in relational databases). 
+**Document**  => (equivalent to **records or rows** of data in SQL).
+**Fields**  => (similar to **columns** in a SQL table). 
+**schema**  => (document data structure)**shape of the document** that is enforced via the application layer.
+**Models** => (equivalent to records in a relational database)higher-order constructors that take a schema and create an instance of a document.
+
+The new **dependency** for it is `npm i mongosse`  and we will need also `dotenv`, `superagent`.
+
+**to create a new schema :**
+```
+const schemaName = new mangoose.Schema({
+here we'll pass our objs.
+});
+
+module.exports = mongoose.model('this will be the name of the collection', schemaName); //schemaName will be the schema.
+```
+in mongoDBB we don't need to create the database to store data inside it.
+
+to **run mongo** in terminal type : `mongo`
+to **see ur databases** type : `show dbs`
+
+to connect the db :
+```
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+```
+
+use the **async function** with MongoDB 
+
+we need to use the **mongo compass** because things will be so **messy in the Ubuntu** so to save time and be organized we'll use it.
+we can see our collection from there and we can **add data** to our database or **find data** or even **delete data** 
+![compass](./img/compass.PNG)
