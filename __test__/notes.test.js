@@ -1,16 +1,14 @@
 /* eslint-disable indent */
 'use strict';
-const notes = require('../lib/notes.js');
-
+const Input = require('../lib/input.js');
+const Notes = require('../lib/notes.js');
 jest.spyOn(global.console, 'log');
 
 describe('notes module', () => {
   it(' do logs when execute() is called with valied message ', () => {
-    const note = new notes({
-      action:'add',
-      payload:'test note',
-  });
-  note.execute();
+    const trying = new Input();
+    const data = new Notes(trying);
+    console.log(data);
     expect(console.log).toHaveBeenCalled();
   });
 });
