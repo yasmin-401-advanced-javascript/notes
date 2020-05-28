@@ -236,3 +236,9 @@ use the **async function** with MongoDB
 we need to use the **mongo compass** because things will be so **messy in the Ubuntu** so to save time and be organized we'll use it.
 we can see our collection from there and we can **add data** to our database or **find data** or even **delete data** 
 ![compass](./img/compass.PNG)
+----------------------------------
+## Realted to class :four:
+
+## testing & supergoose ..
+
+I faced an issue with the `.then` because I had used for the async function in the notes.js page and I think if we want to use the .then in such situation we need to use a promise function before the .then 
