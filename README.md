@@ -23,7 +23,7 @@ In this app I used only the **minimist** & **jsdoc**
 1. `npm i minimist` run it in the command line(Ubuntu)
 1. `npm i jsdoc` run it in the command line(Ubuntu)
 1. `npm i -D jest` run it in the command line(Ubuntu)
-
+1. `npm i -D @code-fellows/supergoose` run it in the command line(Ubuntu)
 
 ## How to run the app? :runner:
 
@@ -242,3 +242,10 @@ we can see our collection from there and we can **add data** to our database or 
 ## testing & supergoose ..
 
 I faced an issue with the `.then` because I had used for the async function in the notes.js page and I think if we want to use the .then in such situation we need to use a promise function before the .then 
+
+**supergoose** its an in memory MongoDB meaning I don't need to do any connection in my test file the only thing I need to do is require the supergoose. Which mean for the test it will not connect to my DB it will connect to the in memory DB 
+
+In this class we are ganna to have an interface class which is in the collection file for dealing with the add , list and delete methods and it will map to the create, read, update and delete and in this methods we will have the implementation for what our app is doning. so our app will stop communicate with our modules directly it will interact with the collection  
+
+
+we'll install in this lab `@code-fellows/supergoose` 
