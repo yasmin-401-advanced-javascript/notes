@@ -9,7 +9,7 @@
     "dependencies": {
         "eslint": "^7.0.0",
         "jsdoc": "^3.6.4",
-        "lint": "^0.7.0",
+        "lint": "^0.8.8",
         "minimist": "^1.2.5"
     },
     "devDependencies": {
